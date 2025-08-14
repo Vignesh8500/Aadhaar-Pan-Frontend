@@ -30,7 +30,7 @@ function App() {
         ...formData,
         DOB: formData.DOB ? formData.DOB.format("YYYY-MM-DD") : null
       };
-      const res = await axios.post("https://aadhar-pan-validation.netlify.app/api/save-data",{data: modifiedData});
+      const res = await axios.post("aadhaar-pan-backend-production.up.railway.app/api/save-data",{data: modifiedData});
       console.log("Backend response:",res.data);
       setStatus("success");
       setStep(steps.length);
